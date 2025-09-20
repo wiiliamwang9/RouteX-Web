@@ -12,7 +12,7 @@ import { Progress } from "@/components/ui/progress"
 import { Separator } from "@/components/ui/separator"
 import { Switch } from "@/components/ui/switch"
 import { TokenSelector } from "@/components/token-selector"
-import { useCreateStrategy, useGetUserStrategies, useActivateStrategy, usePauseStrategy } from "@/hooks/use-strategies"
+import { useCreateStrategy, useGetUserStrategies, useActivateStrategy, usePauseStrategy } from "@/hooks/use-strategies-simple"
 import { useWallet } from "@/hooks/use-wallet"
 import { SUPPORTED_TOKENS } from "@/lib/config"
 import { formatDistanceToNow } from "date-fns"
@@ -60,7 +60,7 @@ const RISK_LEVELS = [
   { id: 2, name: "激进", color: "text-red-600", description: "高风险高收益" },
 ]
 
-import { Strategy } from "@/hooks/use-strategies"
+import { Strategy } from "@/hooks/use-strategies-simple"
 
 export function QuantStrategyDashboard() {
   const { isConnected, address } = useWallet()
